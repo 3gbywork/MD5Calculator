@@ -2,9 +2,8 @@
 
 开发环境：
 
-.Net Framework 4.5
-
-VS2013
+* .Net Framework 4.5
+* VS2013
 
 通过这个Demo，学到了以下知识点（技术点）：
 
