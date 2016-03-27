@@ -1,0 +1,23 @@
+﻿<Window x:Class="MD5Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:MD5Calculator"
+        Icon="MD5.png"
+        Title="MD5 计算器" Height="350" Width="530" AllowDrop="True" Drop="Window_Drop" MouseDoubleClick="Window_MouseDoubleClick">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <TextBox Name="txtstr" Grid.Row="0" AllowDrop="True" PreviewDragOver="TextBox_PreviewDragOver" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" KeyDown="txtstr_KeyDown"/>
+        <TextBox Name="txtinfo" Grid.Row="2" IsReadOnly="True" AllowDrop="True" PreviewDragOver="TextBox_PreviewDragOver" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap">
+            <TextBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="清空结果" Click="MenuItem_Click" Command="local:CustomCommands.Clear"/>
+                </ContextMenu>
+            </TextBox.ContextMenu>
+        </TextBox>
+        <GridSplitter Grid.Row="1" Height="3" HorizontalAlignment="Stretch" VerticalAlignment="Center" Background="Black" ShowsPreview="True"/>
+    </Grid>
+</Window>
